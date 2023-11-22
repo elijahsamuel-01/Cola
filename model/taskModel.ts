@@ -1,4 +1,4 @@
-import { Document, Schema, Types } from "mongoose";
+import { Document, Schema, Types, model } from "mongoose";
 
 interface iTask{
     companyName: string
@@ -28,4 +28,6 @@ const taskModdel = new Schema(
        ]
     },
     {timestamps: true}
-)
+);
+
+export default model<iTaskData>("Tasks", taskModdel);

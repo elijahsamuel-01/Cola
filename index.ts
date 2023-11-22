@@ -10,3 +10,8 @@ app.use(cors());
 const server = app.listen(port, () =>{
     console.log("Server listening on port")
 });
+
+process.on("uncaughtException", (err: Error) =>{
+    console.log("uncaughtException", err)
+    process.exit(1);
+})

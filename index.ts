@@ -1,1 +1,5 @@
-import express from 'express';
+import express, { Application } from 'express';
+import cors from 'cors';
+
+const app: Application = express();
+const port: number = 5544
